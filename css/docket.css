@@ -1,0 +1,311 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(entypo.css);
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto Regular'), local('Roboto-Regular'), url(roboto.woff) format('woff');
+}
+/* entypo */
+
+[class*="entypo-"]:before {
+	font-family: 'entypo', sans-serif;
+}
+/* colours - odd but trendy */
+
+.marble-muse {
+	color: #F4EBDD;
+}
+
+.room {
+	color: #B0AE9E;
+}
+
+.light-navy {
+	color: #577690;
+}
+
+.dark-navy {
+	color: #1E4561;
+}
+
+.main-sail {
+	color: #07151F;
+}
+
+*:not(ul, li, blockquote) {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	font-family: 'Roboto', Verdana, Geneva, sans-serif;
+	background: #fafcff;
+	color: #333;
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+}
+
+a {
+	color: #1E4561;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+textarea {
+	text-align: left;
+}
+
+textarea {
+	background: white;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+/* Navigation lists shall display inline */
+
+#navigation,
+.paging-links {
+	text-align: center;
+}
+
+#navigation li,
+.paging-links li {
+	display: inline;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	margin-left: 0;
+}
+
+#navigation a,
+.paging-links a {
+	text-decoration: none;
+}
+
+#navigation a:hover,
+.paging-links a:hover,
+#navigation .selected {
+	text-decoration: underline;
+}
+
+#navigation {
+	-webkit-box-shadow: 0px 2px 0px #1E4561;
+	-moz-box-shadow: 0px 2px 0px #1E4561;
+	box-shadow: 0px 2px 0px #1E4561;
+	padding-bottom: 1em;
+	background-color: #577690;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation a {
+	color: #efefef;
+	text-decoration: none;
+	display: inline-block;
+	padding: 1em;
+	-webkit-transition: all ease-in-out .2s;
+	-ms-transition: all ease-in-out .2s;
+	-moz-transition: all ease-in-out .2s;
+	transition: all ease-in-out .2s;
+	text-transform: uppercase;
+}
+
+#navigation a:hover {
+	color: white;
+	text-decoration: none;
+	-webkit-box-shadow: inset 0px -3px 0px #afcfff;
+	-moz-box-shadow: inset 0px -3px 0px #afcfff;
+	-ms-box-shadow: inset 0px -3px 0px #afcfff;
+	box-shadow: inset 0px -3px 0px #afcfff;
+}
+
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	width: auto;
+	padding: .5em 1em;
+	margin: 0px;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: normal;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	color: #FFF;
+	background-color: #577690;
+	-webkit-box-shadow: 0px 2px 0px #1E4561;
+	-moz-box-shadow: 0px 2px 0px #1E4561;
+	box-shadow: 0px 2px 0px #1E4561;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.btn:hover {
+	background: #7395b1;
+}
+
+.btn a,
+.btn a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+#open-timesheets,
+.timesheet-list,
+.timesheet-edit,
+.docket-list,
+.employee-list {
+	padding: 1em;
+	overflow-x: hidden;
+}
+
+#open-timesheets .timesheet-list {
+	padding: 0;
+}
+
+.timesheet-edit label {
+	display: inline-block;
+	width: auto;
+	font-weight: bold;
+}
+
+.timesheet-edit input,
+.timesheet-edit select,
+.timesheet-edit #timesheet-description > .mce-panel {
+	margin-bottom: 1em;
+}
+
+ul.docket-list {
+	display: table;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+ul.docket-list li.timesheet {
+	display: table;
+	width: 100%;
+	overflow-x: hidden;
+	margin-bottom: 1em;
+	padding: 0;
+	border-radius: 2px;
+	background: white;
+	border: 1px solid #7395b1;
+	box-shadow: 0px 2px 0px #7395b1;
+	box-sizing: border-box;
+}
+
+ul.docket-list li.timesheet:nth-child(3n+1) {
+	clear: both;
+}
+
+ul.docket-list.my-open,
+ul.docket-list.my-open li.timesheet {
+	width: 100%;
+}
+
+ul.docket-list li.timesheet a {
+	color: #333;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+ul.docket-list li.timesheet .btn a {
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+ul.docket-list li.timesheet .identification {
+	width: 20%;
+	overflow-x: hidden;
+	display: table-cell;
+	padding: 1em;
+}
+
+ul.docket-list li.timesheet .times {
+	width: 20%;
+	overflow-x: hidden;
+	display: table-cell;
+	border-left: 1px solid #577690;
+	padding: 1em;
+}
+
+ul.docket-list li.timesheet .description {
+	width: 50%;
+	overflow-x: hidden;
+	display: table-cell;
+	border-left: 1px solid #577690;
+	padding: 1em;
+}
+
+ul.docket-list li.timesheet .description .description-body {
+	width: auto;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+ul.docket-list li.timesheet .actions {
+	width: 10%;
+	overflow-x: hidden;
+	display: table-cell;
+	border-left: 1px solid #577690;
+	padding: 1em;
+	min-width: 105px;
+}
+
+ul.docket-list li.timesheet .actions .btn {
+	display: block;
+}
+
+@media screen and (max-width: 1024px) {
+	ul.docket-list li.timesheet .identification,
+	ul.docket-list li.timesheet .times,
+	ul.docket-list li.timesheet .description,
+	ul.docket-list li.timesheet .actions {
+		width: auto;
+		display: block;
+		border: none;
+		border-bottom: 1px solid #577690;
+	}
+	ul.docket-list li.timesheet .actions {
+		border: none;
+	}
+}
+
+.tags {
+	margin: 0 1em;
+	padding: 0;
+}
+
+.tags li {
+	display: inline-block;
+	width: auto;
+	padding: .25em .5em;
+	margin: 0px;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: normal;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	color: #1E4561;
+	border: 1px solid #1E4561;
+	background-color: #FFF;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}

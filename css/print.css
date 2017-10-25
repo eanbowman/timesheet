@@ -1,0 +1,33 @@
+* { 
+	margin: 0;
+	padding: 0;
+	border: 0; 
+	color: #000000; 
+	background-color: #FFFFFF; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	}
+	
+body, body p, .leftColumn, .rightColumn, input, label, body a {
+	margin-bottom: 1em;
+	}
+
+.printable-docket {
+	width: 100%;
+	overflow: hidden;
+	text-align: left;
+	font-size: 12pt;
+	border-collapse: collapse;
+	}
+	.printable-docket th { width: 10%; padding-right: 1em; }
+	.printable-docket th, .printable-docket td {
+		padding: 1em 0em;
+		vertical-align: top;
+		}
+
+	#docketID {
+		font-size: 36pt;
+		font-weight: bold;
+		display: inline;
+		}
