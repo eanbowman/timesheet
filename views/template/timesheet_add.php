@@ -21,7 +21,7 @@ $currentDocket = $_POST['docketID'];
 ?>
 </div>
 
-<a class="timesheet-action-add" href="?show=timesheet&action=add">Add</a>
+<a class="timesheet-action-add" href="?show=timesheet&action=add"><button>Add</button></a>
 <form class="timesheet-edit" action="?show=timesheet&action=add" method="post" enctype="multipart-formdata">
 	<fieldset class="timesheet">
 		<div class="timesheet-docketID">

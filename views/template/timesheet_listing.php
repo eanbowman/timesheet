@@ -6,7 +6,7 @@ foreach( $timesheet->errors as $key => $item ) {
 ?>
 </div>
 
-<a class="timesheet-action-add" href="?show=timesheet&action=add">Add</a>
+<a class="timesheet-action-add" href="?show=timesheet&action=add"><button>Add</button></a>
 <ul class="timesheet-listing">
 <?php
 $count = 0;
