@@ -29,6 +29,12 @@ require_once("classes/Login.php");
 // so this single line handles the entire login process. in consequence, you can simply ...
 $login = new Login();
 
+// Allow JSON response to ping
+if($_REQUEST['ping'] != "") {
+	include("views/ping.php");
+	die();
+}
+
 // Include template header view
 include("views/template/header.php");
 
