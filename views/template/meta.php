@@ -33,5 +33,12 @@
 		image_advtab: true
 	});
 	</script>
+	<!-- Keepalive -->
+	<script type="text/javascript">
+		var keepaliveRef = setInterval(function() {
+			// Ping the server to keep the connection alive
+			$.ajax({ url: window.location.pathname + "?ping=pong" });
+		}, 10000);
+	</script>
 	<!-- END INCLUDED META TAGS -->
 
