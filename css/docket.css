@@ -71,6 +71,32 @@ textarea {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
+
+/* User info to appear at the top */
+.user-container {
+	color: whitesmoke;
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    width: auto;
+    position: absolute;
+}
+.user-container a {
+	color: whitesmoke;
+}
+.user-container a {
+	color: white;
+}
+.user-container .user-info {
+	border-right: 2px solid white;
+	padding-right: 0.8em;
+	text-transform: uppercase;
+}
+.user-container .user-info,
+.user-container .user-logout {
+	margin-left: 0.8em;
+}
+
 /* Navigation lists shall display inline */
 
 #navigation,
