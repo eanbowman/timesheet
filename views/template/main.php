@@ -39,8 +39,11 @@ switch( $_REQUEST['show'] ) {
 				$timesheets = $timesheet->get($_REQUEST['timesheet']);
 				include("timesheet_edit.php");
 				break;
-			case "delete": echo "delete timesheet"; break;
-			case "signout": echo "sign out timesheet"; break;
+			case "delete":
+				$timesheet->delete($_GET['timesheet']); // delete it
+				$timesheets = $timesheet->show(); // and show the listing after deletion	
+				include("timesheet_listing.php");
+				break;
 			default: 
 				$timesheets = $timesheet->show();				
 				include("timesheet_listing.php");

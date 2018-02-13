@@ -130,6 +130,28 @@ class Timesheet {
 
     	return $output;
     }
+    
+    /**
+     * delete a single timesheet
+     */
+    public function delete($timesheetID) {
+    	if($timesheetID) {
+    		$sql = "DELETE FROM `time_timesheet` ";
+			$sql .= "WHERE `ID`=?";
+			
+			if(!($stmtDelete = $this->db_connection->prepare($sql))) {
+				$this->errors[] = "Prepare failed: (" . $this->db_connection->errno . ") " . $this->db_connection->error;
+			}
+			
+			if (!$stmtDelete->bind_param("i", $timesheetID)) {
+				$this->errors[] = "Binding parameters failed: (" . $stmtUpdate->errno . ") " . $stmtUpdate->error;
+			}
+			
+			if (!$stmtDelete->execute()) {
+				$this->errors[] = "Execute failed: (" . $stmtUpdate->errno . ") " . $stmtUpdate->error;
+			}
+    	}
+    }
 
 };
  
