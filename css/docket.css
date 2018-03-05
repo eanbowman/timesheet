@@ -247,6 +247,25 @@ textarea {
 	color: green;
 }
 
+.timesheet-actions a {
+    background: #aabbcc;
+    box-shadow: 2px 2px 1px rgba(127, 150, 255, 0.2);
+    display: inline-block;
+    padding: .4em .8em;
+    color: #efefef;
+    border-radius: 2px;
+}
+.timesheet-actions a:hover {
+	background: #bbccdd;
+	color: white;
+	text-decoration: none;
+}
+.timesheet-actions a:active {
+	background: #99aabb;
+	box-shadow: 1px 1px 1px rgba(127, 150, 255, 0.2);
+	transform: translate(1px 1px);
+}
+
 ul.docket-list {
 	display: flex;
 	flex-direction: row;
