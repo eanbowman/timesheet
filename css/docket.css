@@ -236,7 +236,7 @@ textarea {
 	width: 100%;
 }
 
-.timesheet-listing .timesheet .timesheet-description label {
+.timesheet-listing .timesheet label {
 	font-weight: bold;
 }
 
