@@ -5,8 +5,8 @@ foreach( $timesheet->errors as $key => $item ) {
 }
 ?>
 </div>
-
-<a class="timesheet-action-add" href="?show=timesheet&action=add"><button>Add</button></a>
+<div class="timesheet-list-container">
+<a class="timesheet-action-add" href="?show=timesheet&action=add"><button>Add New Timesheet</button></a>
 <ul class="timesheet-listing">
 <?php
 $count = 0;
@@ -43,4 +43,4 @@ foreach( $timesheets as $key => $item ) {
 }
 ?>
 </ul>
-
+</div>
