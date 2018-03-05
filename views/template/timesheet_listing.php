@@ -25,7 +25,15 @@ foreach( $timesheets as $key => $item ) {
 		<div class="timesheet-task"><label>Task:</label> <?php echo $item->task; ?></div>
 		<!-- div class="timesheet-lastModified"><label>Modified:</label> <?php echo $item->lastModified; ?></div -->
 		<div class="timesheet-subtask"><label>Subtask:</label> <?php echo $item->subtask; ?></div>
-		<div class="timesheet-isAClientChange"><label>Change:</label> <?php echo $item->isAClientChange; ?></div>
+		<div class="timesheet-isAClientChange"><label>Change:</label> 
+			<?php 
+			if ($item->isAClientChange != 0) {
+				echo "<span class=\"timesheet-change-client\">Client Requested</span>";
+			} else {
+				echo "<span class=\"timesheet-change-normal\">Normal</span>";
+			} 
+			?>
+		</div>
 		<div class="timesheet-actions">
 			<a href="?show=timesheet&timesheet=<?php echo $item->id; ?>&action=edit" class="timesheet-action-edit">Edit</a>
 			<a href="?show=timesheet&timesheet=<?php echo $item->id; ?>&action=delete" class="timesheet-action-delete" onclick="confirm('Are you sure you want to delete this permanently?');">Delete</a>

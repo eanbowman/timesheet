@@ -240,6 +240,13 @@ textarea {
 	font-weight: bold;
 }
 
+.timesheet-change-client {
+	color: red;
+}
+.timesheet-change-normal {
+	color: green;
+}
+
 ul.docket-list {
 	display: flex;
 	flex-direction: row;
