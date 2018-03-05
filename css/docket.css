@@ -236,6 +236,10 @@ textarea {
 	width: 100%;
 }
 
+.timesheet-listing .timesheet .timesheet-description label {
+	font-weight: bold;
+}
+
 ul.docket-list {
 	display: flex;
 	flex-direction: row;
