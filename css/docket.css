@@ -222,7 +222,8 @@ ul.docket-list {
 }
 
 ul.docket-list li.timesheet {
-	display: table;
+	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	overflow-x: hidden;
 	margin-bottom: 1em;
