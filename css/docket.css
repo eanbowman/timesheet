@@ -212,6 +212,7 @@ textarea {
 	margin-bottom: 1em;
 }
 
+.timesheet-container,
 .timesheet-list-container {
 	margin: 1em auto;
 }

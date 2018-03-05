@@ -13,7 +13,7 @@ foreach( $timesheet->errors as $key => $item ) {
 ?>
 </div>
 
-<a class="timesheet-action-add" href="?show=timesheet&action=add"><button>Add</button></a>
+<div class="timesheet-container">
 <form class="timesheet-edit" method="post" enctype="multipart-formdata">
 <?php
 foreach( $timesheets as $key => $item ) {
@@ -56,4 +56,5 @@ foreach( $timesheets as $key => $item ) {
 }
 ?>
 </form>
+</div>
 
