@@ -212,8 +212,33 @@ textarea {
 	margin-bottom: 1em;
 }
 
+.timesheet-listing {
+	background: whitesmoke;
+	margin: 2%;
+	padding: 0;
+	width: 96%;
+}
+.timesheet-listing .timesheet {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 10px;
+}
+.timesheet-listing .timesheet:nth-child(even) {
+	background: white;
+}
+.timesheet-listing .timesheet > div {
+	display: inline-block;
+	padding: 1em;
+}
+
+.timesheet-listing .timesheet .timesheet-description {
+	width: 100%;
+}
+
 ul.docket-list {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	padding: 0;
 	margin: 0;
@@ -266,7 +291,7 @@ ul.docket-list li.timesheet .identification {
 ul.docket-list li.timesheet .times {
 	width: 20%;
 	overflow-x: hidden;
-	display: table-cell;
+	display: inline-block;
 	border-left: 1px solid #577690;
 	padding: 1em;
 }
@@ -274,7 +299,7 @@ ul.docket-list li.timesheet .times {
 ul.docket-list li.timesheet .description {
 	width: 50%;
 	overflow-x: hidden;
-	display: table-cell;
+	display: inline-block;
 	border-left: 1px solid #577690;
 	padding: 1em;
 }
@@ -288,7 +313,7 @@ ul.docket-list li.timesheet .description .description-body {
 ul.docket-list li.timesheet .actions {
 	width: 10%;
 	overflow-x: hidden;
-	display: table-cell;
+	display: inline-block;
 	border-left: 1px solid #577690;
 	padding: 1em;
 	min-width: 105px;
