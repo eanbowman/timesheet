@@ -22,7 +22,7 @@ $currentDocket = $_POST['docketID'];
 </div>
 
 <div class="timesheet-container">
-<form class="timesheet-edit" action="?show=timesheet&action=add" method="post" enctype="multipart-formdata">
+<form class="timesheet-edit" action="?show=timesheet&action=edit" method="post" enctype="multipart-formdata">
 	<fieldset class="timesheet">
 		<div class="timesheet-docketID">
 			<label for="">docketID:</label> Client Company: 

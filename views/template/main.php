@@ -33,11 +33,13 @@ switch( $_REQUEST['show'] ) {
 				include("timesheet_add.php");
 				break;
 			case "edit":
-				if(isset($_POST)) {
+				if(isset($_POST['id'])) {
 					$timesheet->set($_POST['id']);
-				}
-				$timesheets = $timesheet->get($_REQUEST['timesheet']);
-				include("timesheet_edit.php");
+					$timesheets = $timesheet->get($_REQUEST['timesheet']);
+					include("timesheet_edit.php");
+				} else {
+					include("timesheet_add.php");
+				}				
 				break;
 			case "delete":
 				$timesheet->delete($_GET['timesheet']); // delete it
