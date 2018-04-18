@@ -27,13 +27,13 @@ switch( $_REQUEST['show'] ) {
 		$timesheet = new Timesheet();
 		switch( $_REQUEST['action'] ) {
 			case "add":
-				if(isset($_POST)) {
-					$timesheet->add($_POST['id']);
+				if(isset($_POST['docketID'])) {
+					$timesheetID = $timesheet->add();
 				}
 				include("timesheet_add.php");
 				break;
 			case "edit":
-				if(isset($_POST)) {
+				if(isset($_POST['id'])) {
 					$timesheet->set($_POST['id']);
 				}
 				$timesheets = $timesheet->get($_REQUEST['timesheet']);
