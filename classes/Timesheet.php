@@ -43,7 +43,7 @@ class Timesheet {
      */
     public function show()
     {
-    	$sql = "SELECT * FROM `time_timesheet` ORDER BY `date` DESC";
+    	$sql = "SELECT * FROM `time_timesheet` ORDER BY `date` DESC,`id` DESC";
     	$result = $this->db_connection->query($sql);
     	while($result_row = $result->fetch_object() ) {
     		$output[] = $result_row;
@@ -67,6 +67,14 @@ class Timesheet {
 			$this->errors[] = "Invalid ID provided.";
 		}
     	return $output;
+    }
+    
+    /**
+     * return most recent inserted ID
+     */
+    public function getLastInsertID() {
+    	$output = $this->db_connection->insert_id;
+    	return $output;  
     }
     
     /**
@@ -127,8 +135,8 @@ class Timesheet {
 		}
 		
 		$this->errors[] = $this->db_connection->error;
-
-    	return $output;
+		
+    	return $this->getLastInsertID();
     }
     
     /**
