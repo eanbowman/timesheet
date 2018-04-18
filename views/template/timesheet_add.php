@@ -22,12 +22,13 @@ $currentDocket = $_POST['docketID'];
 </div>
 
 <div class="timesheet-container">
-<?php if($timesheetID != "") { ?>
+<?php if(isset($timesheetID)) { ?>
 <form class="timesheet-edit" action="?show=timesheet&action=edit&timesheet=<?=$timesheetID?>" method="post" enctype="multipart-formdata">
 <?php } else { ?>
 <form class="timesheet-edit" action="?show=timesheet&action=add" method="post" enctype="multipart-formdata">
 <?php } ?>
 	<fieldset class="timesheet">
+		<input type="hidden" name="id" value="<?=$timesheetID?>" />
 		<div class="timesheet-docketID">
 			<label for="">docketID:</label> Client Company: 
 			<select name="docketID">
