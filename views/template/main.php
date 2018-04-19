@@ -32,6 +32,7 @@ switch( $_REQUEST['show'] ) {
 					$timesheets = $timesheet->get($_REQUEST['timesheet']);
 					include("timesheet_edit.php");
 				} else {
+					$timesheet->add();
 					include("timesheet_add.php");
 				}
 				break;
