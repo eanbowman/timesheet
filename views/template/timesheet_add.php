@@ -22,7 +22,7 @@ $currentDocket = $_POST['docketID'];
 </div>
 
 <div class="timesheet-container">
-<?php if(isset($timesheetID)) { ?>
+<?php if(intval($timesheetID) > 0) { ?>
 <form class="timesheet-edit" action="?show=timesheet&action=edit&timesheet=<?=$timesheetID?>" method="post" enctype="multipart-formdata">
 <?php } else { ?>
 <form class="timesheet-edit" action="?show=timesheet&action=add" method="post" enctype="multipart-formdata">
