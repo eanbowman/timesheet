@@ -74,7 +74,11 @@ class Timesheet {
      */
     public function getLastInsertID() {
     	$output = $this->db_connection->insert_id;
-    	return $output;  
+    	if($output) {
+	    	return $output;
+	    } else {
+	    	return false;
+	    }
     }
     
     /**
@@ -106,12 +110,14 @@ class Timesheet {
      
     /**
      * add a new single timesheet
+     * returns the new ID
      */
     public function add() {
     	if($_POST['docketID'] != "" ) {
 			$sql = "INSERT INTO `time_timesheet` ";
 			$sql .= "(`docketID`,`date`,`start`,`end`,`empID`,`description`,`task`,`subtask`,`isAClientChange`)";
 			$sql .= "VALUES (?,?,?,?,?,?,?,?,0)";
+			
 			if (!($stmtUpdate = $this->db_connection->prepare($sql))) {
 				$this->errors[] = "Prepare failed: (" . $this->db_connection->errno . ") " . $this->db_connection->error;
 			}
@@ -130,13 +136,16 @@ class Timesheet {
 			if (!$stmtUpdate->execute()) {
 				$this->errors[] = "Execute failed: (" . $stmtUpdate->errno . ") " . $stmtUpdate->error;
 			}
+
+			$output = $this->getLastInsertID();
 		} else {
 			$this->errors[] = "Required fields were not filled out.";
+			$output = false;
 		}
 		
 		$this->errors[] = $this->db_connection->error;
 		
-    	return $this->getLastInsertID();
+    	return $output;
     }
     
     /**

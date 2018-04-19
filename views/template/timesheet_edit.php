@@ -41,8 +41,8 @@ foreach( $timesheets as $key => $item ) {
 			</select>
 		</div>
 		<div class="timesheet-date"><label for="">date:</label> <input name="date" type="date" value="<?php echo $item->date; ?>" /></div>
-		<div class="timesheet-start"><label for="">start:</label> <input name="start" type="time" value="<?php echo $item->start; ?>" /></div>
-		<div class="timesheet-end"><label for="">end:</label> <input name="end" type="time" value="<?php echo $item->end; ?>" /></div>
+		<div class="timesheet-start"><label for="">start:</label> <input name="start" type="time" step="1" value="<?php echo $item->start; ?>" /></div>
+		<div class="timesheet-end"><label for="">end:</label> <input name="end" type="time" step="1" value="<?php echo $item->end; ?>" /></div>
 		<div class="timesheet-empID"><label for="">empID:</label> <input name="empID" type="number" value="<?php echo $item->empID; ?>" /></div>
 		<div class="timesheet-description"><label for="">description:</label> <textarea name="description"><?php echo $item->description; ?></textarea></div>
 		<div class="timesheet-task"><label for="">task:</label> <input name="task" type="text" value="<?php echo $item->task; ?>" /></div>

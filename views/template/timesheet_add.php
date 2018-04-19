@@ -22,7 +22,7 @@ $currentDocket = $_POST['docketID'];
 </div>
 
 <div class="timesheet-container">
-<?php if(intval($timesheetID) > 0) { ?>
+<?php if(isset($_POST) && isset($_POST['id'])) { ?>
 <form class="timesheet-edit" action="?show=timesheet&action=edit&timesheet=<?=$timesheetID?>" method="post" enctype="multipart-formdata">
 <?php } else { ?>
 <form class="timesheet-edit" action="?show=timesheet&action=add" method="post" enctype="multipart-formdata">
@@ -50,8 +50,8 @@ $currentDocket = $_POST['docketID'];
 			</select>
 		</div>
 		<div class="timesheet-date"><label for="">date:</label> <input name="date" type="date" value="<?php echo $date; ?>" /></div>
-		<div class="timesheet-start"><label for="">start:</label> <input name="start" type="time" value="<?php echo $start; ?>" /></div>
-		<div class="timesheet-end"><label for="">end:</label> <input name="end" type="time" value="<?php echo $_POST['end']; ?>" /></div>
+		<div class="timesheet-start"><label for="">start:</label> <input name="start" type="time" step="1" value="<?php echo $start; ?>" /></div>
+		<div class="timesheet-end"><label for="">end:</label> <input name="end" type="time" step="1" value="<?php echo $_POST['end']; ?>" /></div>
 		<div class="timesheet-empID"><label for="">empID:</label> <input name="empID" type="number" value="<?php echo $_POST['empID']; ?>" /></div>
 		<div class="timesheet-description"><label for="">description:</label> <textarea name="description"><?php echo $_POST['description']; ?></textarea></div>
 		<div class="timesheet-task"><label for="">task:</label> <input name="task" type="text" value="<?php echo $_POST['task']; ?>" /></div>
